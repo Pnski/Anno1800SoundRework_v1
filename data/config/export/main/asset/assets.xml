@@ -1,0 +1,262 @@
+<ModOps>
+  <!--
+    Selection         AwaitingOrders
+    SelectionDamaged  JoinTheArmyTheySaid
+    MoveCommand       ByYourCommand
+    EscordCommand     AtOnceSire
+    PatrolCommand     MoveOut
+  Schooner
+    Values/SoundEmitterCommandBarks/BarkMapping/Selection/AudioPool700090
+    Values/SoundEmitterCommandBarks/BarkMapping/SelectionDamaged/AudioPool700119
+    Values/SoundEmitterCommandBarks/BarkMapping/MoveCommand/AudioPool700091
+    Values/SoundEmitterCommandBarks/BarkMapping/EscortCommand/AudioPool700121
+    Values/SoundEmitterCommandBarks/BarkMapping/PatrolCommand/AudioPool700120
+  -->
+  <!--AddSoundbank-->
+  <ModOp Type="addNextSibling" GUID="235864">
+    <Asset>
+      <Template>SoundBank</Template>
+      <Values>
+        <Standard>
+          <GUID>1600000018</GUID>
+          <Name>BNK_VO_WC2</Name>
+        </Standard>
+        <SoundBank>
+          <SoundBankLocalized>1</SoundBankLocalized>
+        </SoundBank>
+        <WwiseStandard>
+          <WwiseID>2912941678</WwiseID>
+        </WwiseStandard>
+      </Values>
+    </Asset>
+  </ModOp>
+  <!--loadsoundbank? dunno copied from serp-->
+  <!-- the global sound 9899002 loads before mods, so we have to add our sounds instead to the regions -->
+  <ModOp Type="add" GUID="5000001,5000000,160001,114327" Path="/Values/RequiredSoundBanks/SoundBanks">
+    <Item>
+      <Bank>1600000018</Bank>
+    </Item>
+  </ModOp>
+  <ModOp Type="add" GUID="133700001" Path="/Values/RequiredSoundBanks/SoundBanks" Condition="@133700001">
+    <Item>
+      <Bank>1600000018</Bank>
+    </Item>
+  </ModOp>
+  <!--addAudio-->
+  <ModOp Type="merge" GUID='237777' Path="/Values/Audio">
+    <Audio>
+      <DurationLanguageArray>
+        <English>
+          <DurationMinimum>1207</DurationMinimum>
+          <DurationMaximum>1207</DurationMaximum>
+        </English>
+      </DurationLanguageArray>
+    </Audio>
+  </ModOp>
+  <ModOp Type="merge" GUID='237777' Path="/Values/WwiseStandard">
+    <WwiseID>3899636878</WwiseID><!--AwaitingOrders-->
+  </ModOp>
+  <ModOp Type="merge" GUID='237783' Path="/Values/Audio">
+    <Audio>
+      <DurationLanguageArray>
+        <English>
+          <DurationMinimum>1929</DurationMinimum>
+          <DurationMaximum>1929</DurationMaximum>
+        </English>
+      </DurationLanguageArray>
+    </Audio>
+  </ModOp>
+  <ModOp Type="merge" GUID='237783' Path="/Values/WwiseStandard">
+    <WwiseID>1397230906</WwiseID><!--JoinTheArmyTheySaid-->
+  </ModOp>
+  <ModOp Type="merge" GUID='237786' Path="/Values/Audio">
+    <Audio>
+      <DurationLanguageArray>
+        <English>
+          <DurationMinimum>880</DurationMinimum>
+          <DurationMaximum>880</DurationMaximum>
+        </English>
+      </DurationLanguageArray>
+    </Audio>
+  </ModOp>
+  <ModOp Type="merge" GUID='237786' Path="/Values/WwiseStandard">
+    <WwiseID>3513186828</WwiseID><!--ByYourCommand-->
+  </ModOp>
+  <ModOp Type="merge" GUID='237795' Path="/Values/Audio">
+    <Audio>
+      <DurationLanguageArray>
+        <English>
+          <DurationMinimum>1043</DurationMinimum>
+          <DurationMaximum>1043</DurationMaximum>
+        </English>
+      </DurationLanguageArray>
+    </Audio>
+  </ModOp>
+  <ModOp Type="merge" GUID='237795' Path="/Values/WwiseStandard">
+    <WwiseID>1314231880</WwiseID><!--AtOnceSire-->
+  </ModOp>
+  <ModOp Type="merge" GUID='237794' Path="/Values/Audio">
+    <Audio>
+      <DurationLanguageArray>
+        <English>
+          <DurationMinimum>565</DurationMinimum>
+          <DurationMaximum>565</DurationMaximum>
+        </English>
+      </DurationLanguageArray>
+    </Audio>
+  </ModOp>
+  <ModOp Type="merge" GUID='237794' Path="/Values/WwiseStandard">
+    <WwiseID>1969282256</WwiseID><!--MoveOut-->
+  </ModOp>
+  <ModOp Type="replace" GUID='700090' Path="/Values/AudioTextPool/AudioTextList">
+    <AudioTextList><Item><AudioText>268559</AudioText></Item></AudioTextList>
+  </ModOp>
+  <ModOp Type="replace" GUID='700119' Path="/Values/AudioTextPool/AudioTextList">
+    <AudioTextList><Item><AudioText>268565</AudioText></Item></AudioTextList>
+  </ModOp>
+  <ModOp Type="replace" GUID='700091' Path="/Values/AudioTextPool/AudioTextList">
+    <AudioTextList><Item><AudioText>268568</AudioText></Item></AudioTextList>
+  </ModOp>
+  <!--<ModOp Type="replace" GUID='700121' Path="/Values/AudioTextPool/AudioTextList">
+    <AudioTextList><Item><AudioText>268581</AudioText></Item></AudioTextList>
+  </ModOp>already single list-->
+  <!--<ModOp Type="replace" GUID='700120' Path="/Values/AudioTextPool/AudioTextList">
+    <AudioTextList><Item><AudioText>268580</AudioText></Item></AudioTextList>
+  </ModOp>already single list-->
+  <!-- Sailing Ships -->
+  <ModOp Type="merge" GUID='100438,100437,7080,100439,100441,100440' Path="/Values/SoundEmitterCommandBarks">
+    <SoundEmitterCommandBarks>
+      <BarkMapping>
+				<Selection>
+					<AudioPool>700090</AudioPool>
+					<!--Schooner_SelectPool-->
+				</Selection>
+				<SelectionDamaged>
+					<AudioPool>700119</AudioPool>
+					<!--Schooner_SelectDamagedPool-->
+				</SelectionDamaged>
+				<MoveCommand>
+					<AudioPool>700091</AudioPool>
+					<!--Schooner_MovePool-->
+				</MoveCommand>
+				<EscortCommand>
+					<AudioPool>700121</AudioPool>
+					<!--Schooner_EscortPool-->
+				</EscortCommand>
+				<PatrolCommand>
+					<AudioPool>700120</AudioPool>
+					<!--Schooner_PatrolPool-->
+				</PatrolCommand>
+			</BarkMapping>
+    </SoundEmitterCommandBarks>
+  </ModOp>
+  <!-- Steel Ships -->
+  <ModOp Type="merge" GUID='1010062,100442,7076,100443,968,1537,100853,118718,720,15831,15835,15836' Path="/Values/SoundEmitterCommandBarks">
+    <SoundEmitterCommandBarks>
+      <BarkMapping>
+				<Selection>
+					<AudioPool>700090</AudioPool>
+					<!--Schooner_SelectPool-->
+				</Selection>
+				<SelectionDamaged>
+					<AudioPool>700119</AudioPool>
+					<!--Schooner_SelectDamagedPool-->
+				</SelectionDamaged>
+				<MoveCommand>
+					<AudioPool>700091</AudioPool>
+					<!--Schooner_MovePool-->
+				</MoveCommand>
+				<EscortCommand>
+					<AudioPool>700121</AudioPool>
+					<!--Schooner_EscortPool-->
+				</EscortCommand>
+				<PatrolCommand>
+					<AudioPool>700120</AudioPool>
+					<!--Schooner_PatrolPool-->
+				</PatrolCommand>
+			</BarkMapping>
+    </SoundEmitterCommandBarks>
+  </ModOp>
+  <!-- Air Ships -->
+  <ModOp Type="merge" GUID='1654,1054,1655,1056,1058,1059,1060,1755,1733,1731,1734,1732,1735,1736,1737,114166' Path="/Values/SoundEmitterCommandBarks">
+    <SoundEmitterCommandBarks>
+      <BarkMapping>
+				<Selection>
+					<AudioPool>700090</AudioPool>
+					<!--Schooner_SelectPool-->
+				</Selection>
+				<SelectionDamaged>
+					<AudioPool>700119</AudioPool>
+					<!--Schooner_SelectDamagedPool-->
+				</SelectionDamaged>
+				<MoveCommand>
+					<AudioPool>700091</AudioPool>
+					<!--Schooner_MovePool-->
+				</MoveCommand>
+				<EscortCommand>
+					<AudioPool>700121</AudioPool>
+					<!--Schooner_EscortPool-->
+				</EscortCommand>
+				<PatrolCommand>
+					<AudioPool>700120</AudioPool>
+					<!--Schooner_PatrolPool-->
+				</PatrolCommand>
+			</BarkMapping>
+    </SoundEmitterCommandBarks>
+  </ModOp>
+  <!-- Ships by items (could probably replaced in template)-->
+  <!--sailing-->
+  <ModOp Type="merge" GUID='102427,102419,102421,102420' Path="/Values/SoundEmitterCommandBarks">
+    <SoundEmitterCommandBarks>
+      <BarkMapping>
+				<Selection>
+					<AudioPool>700090</AudioPool>
+					<!--Schooner_SelectPool-->
+				</Selection>
+				<SelectionDamaged>
+					<AudioPool>700119</AudioPool>
+					<!--Schooner_SelectDamagedPool-->
+				</SelectionDamaged>
+				<MoveCommand>
+					<AudioPool>700091</AudioPool>
+					<!--Schooner_MovePool-->
+				</MoveCommand>
+				<EscortCommand>
+					<AudioPool>700121</AudioPool>
+					<!--Schooner_EscortPool-->
+				</EscortCommand>
+				<PatrolCommand>
+					<AudioPool>700120</AudioPool>
+					<!--Schooner_PatrolPool-->
+				</PatrolCommand>
+			</BarkMapping>
+    </SoundEmitterCommandBarks>
+  </ModOp>
+  <!--steam-->
+  <ModOp Type="merge" GUID='102455,132404,102428,102425,102423,102422' Path="/Values/SoundEmitterCommandBarks">
+    <SoundEmitterCommandBarks>
+      <BarkMapping>
+				<Selection>
+					<AudioPool>700090</AudioPool>
+					<!--Schooner_SelectPool-->
+				</Selection>
+				<SelectionDamaged>
+					<AudioPool>700119</AudioPool>
+					<!--Schooner_SelectDamagedPool-->
+				</SelectionDamaged>
+				<MoveCommand>
+					<AudioPool>700091</AudioPool>
+					<!--Schooner_MovePool-->
+				</MoveCommand>
+				<EscortCommand>
+					<AudioPool>700121</AudioPool>
+					<!--Schooner_EscortPool-->
+				</EscortCommand>
+				<PatrolCommand>
+					<AudioPool>700120</AudioPool>
+					<!--Schooner_PatrolPool-->
+				</PatrolCommand>
+			</BarkMapping>
+    </SoundEmitterCommandBarks>
+  </ModOp>
+</ModOps>

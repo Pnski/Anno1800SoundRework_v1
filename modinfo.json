@@ -1,0 +1,52 @@
+{
+  "Version": "0.0.1",
+  "ModID": "VoicesRework_nyk_v1",
+  "DeprecateIds": [],
+  "LoadAfterIds": [],
+  "IncompatibleIds": null,
+  "ModDependencies": null,
+  "Category": {
+    "English": "Misc",
+    "Chinese": "Misc",
+    "French": "Misc",
+    "German": "Misc",
+    "Italian": "Misc",
+    "Japanese": "Misc",
+    "Korean": "Misc",
+    "Polish": "Misc",
+    "Russian": "Misc",
+    "Spanish": "Misc",
+    "Taiwanese": "Misc"
+  },
+  "ModName": {
+    "Chinese": "Voices rework",
+    "English": "Voices rework",
+    "French": "Voices rework",
+    "German": "Voices rework",
+    "Italian": "Voices rework",
+    "Japanese": "Voices rework",
+    "Korean": "Voices rework",
+    "Polish": "Voices rework",
+    "Russian": "Voices rework",
+    "Spanish": "Voices rework",
+    "Taiwanese": "Voices rework"
+  },
+  "Description": {
+    "English": null,
+    "German": null,
+    "Chinese": null,
+    "French": null,
+    "Italian": null,
+    "Japanese": null,
+    "Korean": null,
+    "Polish": null,
+    "Russian": null,
+    "Spanish": null,
+    "Taiwanese": null
+  },
+  "KnownIssues": null,
+  "DLCDependencies": null,
+  "CreatorName": "Pnski",
+  "CreatorContact": null,
+  "Image": null
+}
